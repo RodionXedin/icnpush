@@ -1,0 +1,59 @@
+
+{
+    "icnpushApp": {
+        "composite" : {
+            "home": {
+                "title": "Composites",
+                "createLabel": "Composite erstellen",
+                "createOrEditLabel": "Composite erstellen oder bearbeiten"
+            },
+            "created": "Composite erstellt mit ID {{ param }}",
+            "updated": "Composite aktualisiert mit ID {{ param }}",
+            "deleted": "Composite gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Composite {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Composite"
+            },
+            "deviceId": "Device Id",
+            "crashDate": "Crash Date",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "speed": "Speed",
+            "odometer": "Odometer",
+            "heading": "Heading",
+            "rawData": "Raw Data",
+            "altitude": "Altitude",
+            "numberOfSatellites": "Number Of Satellites",
+            "sequenceNumber": "Sequence Number",
+            "rssi": "Rssi",
+            "ntfEngRequestId": "Ntf Eng Request Id",
+            "crashUuid": "Crash Uuid",
+            "deviceIdType": "Device Id Type",
+            "crush": "Crush",
+            "pdof": "Pdof",
+            "vin": "Vin",
+            "severityProcessedOn": "Severity Processed On",
+            "severityCode": "Severity Code",
+            "make": "Make",
+            "model": "Model",
+            "year": "Year",
+            "vinRegion": "Vin Region",
+            "mpd2": "Mpd 2",
+            "mpd3": "Mpd 3",
+            "peakG": "Peak G",
+            "deltaV": "Delta V",
+            "vehicleClass": "Vehicle Class",
+            "createdOn": "Created On",
+            "lastModifiedOn": "Last Modified On",
+            "street1": "Street 1",
+            "street2": "Street 2",
+            "zip": "Zip",
+            "country": "Country",
+            "city": "City",
+            "stateProvince": "State Province",
+            "crashDirection": "Crash Direction"
+        }
+    }
+}

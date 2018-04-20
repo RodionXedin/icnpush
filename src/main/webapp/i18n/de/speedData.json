@@ -1,0 +1,27 @@
+
+{
+    "icnpushApp": {
+        "speedData" : {
+            "home": {
+                "title": "Speed Data",
+                "createLabel": "Speed Data erstellen",
+                "createOrEditLabel": "Speed Data erstellen oder bearbeiten"
+            },
+            "created": "Speed Data erstellt mit ID {{ param }}",
+            "updated": "Speed Data aktualisiert mit ID {{ param }}",
+            "deleted": "Speed Data gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Speed Data {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Speed Data"
+            },
+            "icnId": "Icn Id",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "speed": "Speed",
+            "altitude": "Altitude",
+            "time": "Time"
+        }
+    }
+}

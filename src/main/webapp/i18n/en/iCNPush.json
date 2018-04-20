@@ -1,0 +1,25 @@
+
+{
+    "icnpushApp": {
+        "iCNPush" : {
+            "home": {
+                "title": "ICN Pushes",
+                "createLabel": "Create a new ICN Push",
+                "createOrEditLabel": "Create or edit a ICN Push"
+            },
+            "created": "A new ICN Push is created with identifier {{ param }}",
+            "updated": "A ICN Push is updated with identifier {{ param }}",
+            "deleted": "A ICN Push is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete ICN Push {{ id }}?"
+            },
+            "detail": {
+                "title": "ICN Push"
+            },
+            "esn": "Esn",
+            "datetime": "Datetime",
+            "vehicle": "Vehicle",
+            "crash": "Crash"
+        }
+    }
+}

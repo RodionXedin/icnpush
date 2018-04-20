@@ -1,0 +1,95 @@
+entity AccelerationPair{
+id Integer,
+icnId Integer,
+accX Integer,
+accY Integer,
+accZ Integer,
+time Integer
+}
+
+entity Address{
+addressLine1 String, 
+addressLine2 String,
+city String,
+state String,
+country String,
+postalCode String
+}
+
+entity Composite{
+id Integer,
+deviceId String,
+crashDate String,
+latitude Double,
+longitude Double,
+speed Integer,
+odometer Integer,
+heading Integer,
+rawData String,
+altitude Integer,
+numberOfSatellites Integer,
+sequenceNumber Integer,
+rssi Integer,
+ntfEngRequestId String,
+crashUuid String,
+deviceIdType String,
+crush Integer,
+pdof Integer,
+vin String,
+severityProcessedOn String,
+severityCode String,
+make String,
+model String,
+year String,
+vinRegion String,
+mpd2 Integer,
+mpd3 Integer,
+peakG Integer,
+deltaV Integer,
+vehicleClass String,
+createdOn String,
+lastModifiedOn String,
+street1 String,
+street2 String,
+zip String,
+country String,
+city String,
+stateProvince String,
+crashDirection String
+}
+
+entity Crash{
+severity Integer,
+latitude Double,
+longitude Double, 
+address String
+}
+
+entity ICNPush{
+id Integer,
+esn String, 
+datetime String,
+}
+
+entity SpeedData{
+id Integer,
+icnId Integer,
+latitude Integer,
+longitude Integer,
+speed Integer,
+altitude Integer,
+time Integer
+}
+
+entity Vehicle{
+vin String, 
+vinRegion String, 
+make String, 
+model String, 
+year Integer
+}
+
+relationship OneToOne{
+ICNPush{vehicle} to Vehicle,
+ICNPush{crash} to Crash
+}

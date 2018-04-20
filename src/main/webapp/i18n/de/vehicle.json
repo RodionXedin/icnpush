@@ -1,0 +1,26 @@
+
+{
+    "icnpushApp": {
+        "vehicle" : {
+            "home": {
+                "title": "Vehicles",
+                "createLabel": "Vehicle erstellen",
+                "createOrEditLabel": "Vehicle erstellen oder bearbeiten"
+            },
+            "created": "Vehicle erstellt mit ID {{ param }}",
+            "updated": "Vehicle aktualisiert mit ID {{ param }}",
+            "deleted": "Vehicle gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Vehicle {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Vehicle"
+            },
+            "vin": "Vin",
+            "vinRegion": "Vin Region",
+            "make": "Make",
+            "model": "Model",
+            "year": "Year"
+        }
+    }
+}

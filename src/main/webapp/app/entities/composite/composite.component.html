@@ -1,0 +1,132 @@
+<div>
+    <h2>
+        <span jhiTranslate="icnpushApp.composite.home.title">Composites</span>
+        <button class="btn btn-primary float-right jh-create-entity create-composite" [routerLink]="['/', { outlets: { popup: ['composite-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="icnpushApp.composite.home.createLabel">
+            Create new Composite
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="composites">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.deviceId">Device Id</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.crashDate">Crash Date</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.latitude">Latitude</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.longitude">Longitude</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.speed">Speed</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.odometer">Odometer</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.heading">Heading</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.rawData">Raw Data</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.altitude">Altitude</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.numberOfSatellites">Number Of Satellites</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.sequenceNumber">Sequence Number</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.rssi">Rssi</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.ntfEngRequestId">Ntf Eng Request Id</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.crashUuid">Crash Uuid</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.deviceIdType">Device Id Type</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.crush">Crush</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.pdof">Pdof</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.vin">Vin</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.severityProcessedOn">Severity Processed On</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.severityCode">Severity Code</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.make">Make</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.model">Model</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.year">Year</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.vinRegion">Vin Region</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.mpd2">Mpd 2</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.mpd3">Mpd 3</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.peakG">Peak G</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.deltaV">Delta V</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.vehicleClass">Vehicle Class</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.createdOn">Created On</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.lastModifiedOn">Last Modified On</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.street1">Street 1</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.street2">Street 2</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.zip">Zip</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.country">Country</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.city">City</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.stateProvince">State Province</span></th>
+            <th><span jhiTranslate="icnpushApp.composite.crashDirection">Crash Direction</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let composite of composites ;trackBy: trackId">
+                <td><a [routerLink]="['../composite', composite.id ]">{{composite.id}}</a></td>
+                <td>{{composite.deviceId}}</td>
+                <td>{{composite.crashDate}}</td>
+                <td>{{composite.latitude}}</td>
+                <td>{{composite.longitude}}</td>
+                <td>{{composite.speed}}</td>
+                <td>{{composite.odometer}}</td>
+                <td>{{composite.heading}}</td>
+                <td>{{composite.rawData}}</td>
+                <td>{{composite.altitude}}</td>
+                <td>{{composite.numberOfSatellites}}</td>
+                <td>{{composite.sequenceNumber}}</td>
+                <td>{{composite.rssi}}</td>
+                <td>{{composite.ntfEngRequestId}}</td>
+                <td>{{composite.crashUuid}}</td>
+                <td>{{composite.deviceIdType}}</td>
+                <td>{{composite.crush}}</td>
+                <td>{{composite.pdof}}</td>
+                <td>{{composite.vin}}</td>
+                <td>{{composite.severityProcessedOn}}</td>
+                <td>{{composite.severityCode}}</td>
+                <td>{{composite.make}}</td>
+                <td>{{composite.model}}</td>
+                <td>{{composite.year}}</td>
+                <td>{{composite.vinRegion}}</td>
+                <td>{{composite.mpd2}}</td>
+                <td>{{composite.mpd3}}</td>
+                <td>{{composite.peakG}}</td>
+                <td>{{composite.deltaV}}</td>
+                <td>{{composite.vehicleClass}}</td>
+                <td>{{composite.createdOn}}</td>
+                <td>{{composite.lastModifiedOn}}</td>
+                <td>{{composite.street1}}</td>
+                <td>{{composite.street2}}</td>
+                <td>{{composite.zip}}</td>
+                <td>{{composite.country}}</td>
+                <td>{{composite.city}}</td>
+                <td>{{composite.stateProvince}}</td>
+                <td>{{composite.crashDirection}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../composite', composite.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'composite/'+ composite.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'composite/'+ composite.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

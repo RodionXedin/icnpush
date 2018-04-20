@@ -1,0 +1,38 @@
+
+<div *ngIf="crash">
+    <h2><span jhiTranslate="icnpushApp.crash.detail.title">Crash</span> {{crash.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="icnpushApp.crash.severity">Severity</span></dt>
+        <dd>
+            <span>{{crash.severity}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.crash.latitude">Latitude</span></dt>
+        <dd>
+            <span>{{crash.latitude}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.crash.longitude">Longitude</span></dt>
+        <dd>
+            <span>{{crash.longitude}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.crash.address">Address</span></dt>
+        <dd>
+            <span>{{crash.address}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'crash/'+ crash.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "icnId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "accX",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "accY",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "accZ",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "time",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180420164808",
+    "entityTableName": "acceleration_pair",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

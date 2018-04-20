@@ -1,0 +1,215 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myCompositeLabel" jhiTranslate="icnpushApp.composite.home.createOrEditLabel">Create or edit a Composite</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!composite.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="composite.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.deviceId" for="field_deviceId">Device Id</label>
+            <input type="text" class="form-control" name="deviceId" id="field_deviceId"
+                [(ngModel)]="composite.deviceId" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.crashDate" for="field_crashDate">Crash Date</label>
+            <input type="text" class="form-control" name="crashDate" id="field_crashDate"
+                [(ngModel)]="composite.crashDate" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.latitude" for="field_latitude">Latitude</label>
+            <input type="number" class="form-control" name="latitude" id="field_latitude"
+                [(ngModel)]="composite.latitude" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.longitude" for="field_longitude">Longitude</label>
+            <input type="number" class="form-control" name="longitude" id="field_longitude"
+                [(ngModel)]="composite.longitude" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.speed" for="field_speed">Speed</label>
+            <input type="number" class="form-control" name="speed" id="field_speed"
+                [(ngModel)]="composite.speed" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.odometer" for="field_odometer">Odometer</label>
+            <input type="number" class="form-control" name="odometer" id="field_odometer"
+                [(ngModel)]="composite.odometer" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.heading" for="field_heading">Heading</label>
+            <input type="number" class="form-control" name="heading" id="field_heading"
+                [(ngModel)]="composite.heading" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.rawData" for="field_rawData">Raw Data</label>
+            <input type="text" class="form-control" name="rawData" id="field_rawData"
+                [(ngModel)]="composite.rawData" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.altitude" for="field_altitude">Altitude</label>
+            <input type="number" class="form-control" name="altitude" id="field_altitude"
+                [(ngModel)]="composite.altitude" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.numberOfSatellites" for="field_numberOfSatellites">Number Of Satellites</label>
+            <input type="number" class="form-control" name="numberOfSatellites" id="field_numberOfSatellites"
+                [(ngModel)]="composite.numberOfSatellites" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.sequenceNumber" for="field_sequenceNumber">Sequence Number</label>
+            <input type="number" class="form-control" name="sequenceNumber" id="field_sequenceNumber"
+                [(ngModel)]="composite.sequenceNumber" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.rssi" for="field_rssi">Rssi</label>
+            <input type="number" class="form-control" name="rssi" id="field_rssi"
+                [(ngModel)]="composite.rssi" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.ntfEngRequestId" for="field_ntfEngRequestId">Ntf Eng Request Id</label>
+            <input type="text" class="form-control" name="ntfEngRequestId" id="field_ntfEngRequestId"
+                [(ngModel)]="composite.ntfEngRequestId" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.crashUuid" for="field_crashUuid">Crash Uuid</label>
+            <input type="text" class="form-control" name="crashUuid" id="field_crashUuid"
+                [(ngModel)]="composite.crashUuid" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.deviceIdType" for="field_deviceIdType">Device Id Type</label>
+            <input type="text" class="form-control" name="deviceIdType" id="field_deviceIdType"
+                [(ngModel)]="composite.deviceIdType" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.crush" for="field_crush">Crush</label>
+            <input type="number" class="form-control" name="crush" id="field_crush"
+                [(ngModel)]="composite.crush" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.pdof" for="field_pdof">Pdof</label>
+            <input type="number" class="form-control" name="pdof" id="field_pdof"
+                [(ngModel)]="composite.pdof" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.vin" for="field_vin">Vin</label>
+            <input type="text" class="form-control" name="vin" id="field_vin"
+                [(ngModel)]="composite.vin" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.severityProcessedOn" for="field_severityProcessedOn">Severity Processed On</label>
+            <input type="text" class="form-control" name="severityProcessedOn" id="field_severityProcessedOn"
+                [(ngModel)]="composite.severityProcessedOn" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.severityCode" for="field_severityCode">Severity Code</label>
+            <input type="text" class="form-control" name="severityCode" id="field_severityCode"
+                [(ngModel)]="composite.severityCode" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.make" for="field_make">Make</label>
+            <input type="text" class="form-control" name="make" id="field_make"
+                [(ngModel)]="composite.make" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.model" for="field_model">Model</label>
+            <input type="text" class="form-control" name="model" id="field_model"
+                [(ngModel)]="composite.model" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.year" for="field_year">Year</label>
+            <input type="text" class="form-control" name="year" id="field_year"
+                [(ngModel)]="composite.year" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.vinRegion" for="field_vinRegion">Vin Region</label>
+            <input type="text" class="form-control" name="vinRegion" id="field_vinRegion"
+                [(ngModel)]="composite.vinRegion" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.mpd2" for="field_mpd2">Mpd 2</label>
+            <input type="number" class="form-control" name="mpd2" id="field_mpd2"
+                [(ngModel)]="composite.mpd2" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.mpd3" for="field_mpd3">Mpd 3</label>
+            <input type="number" class="form-control" name="mpd3" id="field_mpd3"
+                [(ngModel)]="composite.mpd3" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.peakG" for="field_peakG">Peak G</label>
+            <input type="number" class="form-control" name="peakG" id="field_peakG"
+                [(ngModel)]="composite.peakG" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.deltaV" for="field_deltaV">Delta V</label>
+            <input type="number" class="form-control" name="deltaV" id="field_deltaV"
+                [(ngModel)]="composite.deltaV" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.vehicleClass" for="field_vehicleClass">Vehicle Class</label>
+            <input type="text" class="form-control" name="vehicleClass" id="field_vehicleClass"
+                [(ngModel)]="composite.vehicleClass" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.createdOn" for="field_createdOn">Created On</label>
+            <input type="text" class="form-control" name="createdOn" id="field_createdOn"
+                [(ngModel)]="composite.createdOn" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.lastModifiedOn" for="field_lastModifiedOn">Last Modified On</label>
+            <input type="text" class="form-control" name="lastModifiedOn" id="field_lastModifiedOn"
+                [(ngModel)]="composite.lastModifiedOn" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.street1" for="field_street1">Street 1</label>
+            <input type="text" class="form-control" name="street1" id="field_street1"
+                [(ngModel)]="composite.street1" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.street2" for="field_street2">Street 2</label>
+            <input type="text" class="form-control" name="street2" id="field_street2"
+                [(ngModel)]="composite.street2" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.zip" for="field_zip">Zip</label>
+            <input type="text" class="form-control" name="zip" id="field_zip"
+                [(ngModel)]="composite.zip" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.country" for="field_country">Country</label>
+            <input type="text" class="form-control" name="country" id="field_country"
+                [(ngModel)]="composite.country" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                [(ngModel)]="composite.city" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.stateProvince" for="field_stateProvince">State Province</label>
+            <input type="text" class="form-control" name="stateProvince" id="field_stateProvince"
+                [(ngModel)]="composite.stateProvince" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="icnpushApp.composite.crashDirection" for="field_crashDirection">Crash Direction</label>
+            <input type="text" class="form-control" name="crashDirection" id="field_crashDirection"
+                [(ngModel)]="composite.crashDirection" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

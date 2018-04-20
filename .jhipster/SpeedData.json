@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "icnId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "latitude",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "speed",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "altitude",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "time",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180420164813",
+    "entityTableName": "speed_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
