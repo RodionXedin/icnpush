@@ -1,0 +1,164 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "deviceId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "crashDate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "latitude",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "speed",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "odometer",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "heading",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "rawData",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "altitude",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "numberOfSatellites",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sequenceNumber",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "rssi",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ntfEngRequestId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "crashUuid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "deviceIdType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "crush",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pdof",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "vin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "severityProcessedOn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "severityCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "make",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "model",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "year",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vinRegion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mpd2",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "mpd3",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "peakG",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "deltaV",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "vehicleClass",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdOn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastModifiedOn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "street1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "street2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zip",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stateProvince",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "crashDirection",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180420164810",
+    "entityTableName": "composite",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

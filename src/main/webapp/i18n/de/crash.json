@@ -1,0 +1,25 @@
+
+{
+    "icnpushApp": {
+        "crash" : {
+            "home": {
+                "title": "Crashes",
+                "createLabel": "Crash erstellen",
+                "createOrEditLabel": "Crash erstellen oder bearbeiten"
+            },
+            "created": "Crash erstellt mit ID {{ param }}",
+            "updated": "Crash aktualisiert mit ID {{ param }}",
+            "deleted": "Crash gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Crash {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Crash"
+            },
+            "severity": "Severity",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "address": "Address"
+        }
+    }
+}

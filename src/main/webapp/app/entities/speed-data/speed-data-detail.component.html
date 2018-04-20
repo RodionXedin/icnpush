@@ -1,0 +1,46 @@
+
+<div *ngIf="speedData">
+    <h2><span jhiTranslate="icnpushApp.speedData.detail.title">Speed Data</span> {{speedData.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="icnpushApp.speedData.icnId">Icn Id</span></dt>
+        <dd>
+            <span>{{speedData.icnId}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.speedData.latitude">Latitude</span></dt>
+        <dd>
+            <span>{{speedData.latitude}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.speedData.longitude">Longitude</span></dt>
+        <dd>
+            <span>{{speedData.longitude}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.speedData.speed">Speed</span></dt>
+        <dd>
+            <span>{{speedData.speed}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.speedData.altitude">Altitude</span></dt>
+        <dd>
+            <span>{{speedData.altitude}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.speedData.time">Time</span></dt>
+        <dd>
+            <span>{{speedData.time}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'speed-data/'+ speedData.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

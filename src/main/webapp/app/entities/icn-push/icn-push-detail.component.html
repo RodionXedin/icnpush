@@ -1,0 +1,42 @@
+
+<div *ngIf="iCNPush">
+    <h2><span jhiTranslate="icnpushApp.iCNPush.detail.title">ICN Push</span> {{iCNPush.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="icnpushApp.iCNPush.esn">Esn</span></dt>
+        <dd>
+            <span>{{iCNPush.esn}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.iCNPush.datetime">Datetime</span></dt>
+        <dd>
+            <span>{{iCNPush.datetime}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.iCNPush.vehicle">Vehicle</span></dt>
+        <dd>
+            <div *ngIf="iCNPush.vehicle">
+                <a [routerLink]="['/vehicle', iCNPush.vehicle?.id]">{{iCNPush.vehicle?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.iCNPush.crash">Crash</span></dt>
+        <dd>
+            <div *ngIf="iCNPush.crash">
+                <a [routerLink]="['/crash', iCNPush.crash?.id]">{{iCNPush.crash?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'icn-push/'+ iCNPush.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

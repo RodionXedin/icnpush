@@ -1,0 +1,26 @@
+
+{
+    "icnpushApp": {
+        "accelerationPair" : {
+            "home": {
+                "title": "Acceleration Pairs",
+                "createLabel": "Create a new Acceleration Pair",
+                "createOrEditLabel": "Create or edit a Acceleration Pair"
+            },
+            "created": "A new Acceleration Pair is created with identifier {{ param }}",
+            "updated": "A Acceleration Pair is updated with identifier {{ param }}",
+            "deleted": "A Acceleration Pair is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Acceleration Pair {{ id }}?"
+            },
+            "detail": {
+                "title": "Acceleration Pair"
+            },
+            "icnId": "Icn Id",
+            "accX": "Acc X",
+            "accY": "Acc Y",
+            "accZ": "Acc Z",
+            "time": "Time"
+        }
+    }
+}

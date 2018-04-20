@@ -1,0 +1,42 @@
+
+<div *ngIf="accelerationPair">
+    <h2><span jhiTranslate="icnpushApp.accelerationPair.detail.title">Acceleration Pair</span> {{accelerationPair.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="icnpushApp.accelerationPair.icnId">Icn Id</span></dt>
+        <dd>
+            <span>{{accelerationPair.icnId}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.accelerationPair.accX">Acc X</span></dt>
+        <dd>
+            <span>{{accelerationPair.accX}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.accelerationPair.accY">Acc Y</span></dt>
+        <dd>
+            <span>{{accelerationPair.accY}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.accelerationPair.accZ">Acc Z</span></dt>
+        <dd>
+            <span>{{accelerationPair.accZ}}</span>
+        </dd>
+        <dt><span jhiTranslate="icnpushApp.accelerationPair.time">Time</span></dt>
+        <dd>
+            <span>{{accelerationPair.time}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'acceleration-pair/'+ accelerationPair.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

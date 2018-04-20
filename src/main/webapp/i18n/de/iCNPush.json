@@ -1,0 +1,25 @@
+
+{
+    "icnpushApp": {
+        "iCNPush" : {
+            "home": {
+                "title": "ICN Pushes",
+                "createLabel": "ICN Push erstellen",
+                "createOrEditLabel": "ICN Push erstellen oder bearbeiten"
+            },
+            "created": "ICN Push erstellt mit ID {{ param }}",
+            "updated": "ICN Push aktualisiert mit ID {{ param }}",
+            "deleted": "ICN Push gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll ICN Push {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "ICN Push"
+            },
+            "esn": "Esn",
+            "datetime": "Datetime",
+            "vehicle": "Vehicle",
+            "crash": "Crash"
+        }
+    }
+}

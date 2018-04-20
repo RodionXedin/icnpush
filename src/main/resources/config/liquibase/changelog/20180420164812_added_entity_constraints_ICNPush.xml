@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity ICNPush.
+    -->
+    <changeSet id="20180420164812-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="vehicle_id"
+                                 baseTableName="icn_push"
+                                 constraintName="fk_icnpush_vehicle_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vehicle"/>
+
+        <addForeignKeyConstraint baseColumnNames="crash_id"
+                                 baseTableName="icn_push"
+                                 constraintName="fk_icnpush_crash_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="crash"/>
+
+    </changeSet>
+</databaseChangeLog>
